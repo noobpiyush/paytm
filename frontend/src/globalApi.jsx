@@ -1,0 +1,1 @@
+export const url = "https://paytm-api-omega.vercel.app";

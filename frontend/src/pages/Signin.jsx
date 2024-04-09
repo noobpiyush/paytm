@@ -6,6 +6,7 @@ import { BottomWarning } from "../components/BottomWarning";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { url } from "../globalApi";
 export const Signin = () => {
 
   const[username,setUserName] = useState("");
@@ -16,10 +17,14 @@ export const Signin = () => {
 
   const signInUser = async () => {
     try {
-      const response = await axios.post("http://20.244.89.70:4000/api/v1/user/signin",{
+      const response = await axios.post(`${url}/api/v1/user/signin`,{
         username,
         password
       });
+      if (response.data.status != 200) {
+        alert("error while signing in")
+        return;
+      }
       localStorage.setItem("token",response.data.token);
       navigate("/dashboard");
     } catch (error) {

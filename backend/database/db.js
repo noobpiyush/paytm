@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("your mongo  string");
+mongoose.connect("mongodb+srv://paytm:piyush@cluster0.qgvm7jk.mongodb.net/paytm");
 
 //creating userschema
 
@@ -58,4 +58,3 @@ module.exports = {
     User,
    Account
 }
-

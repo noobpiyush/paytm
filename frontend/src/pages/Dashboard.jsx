@@ -3,11 +3,13 @@ import {Appbar} from "../components/Appbar";
 import {Users} from "../components/Users"
 import {Balance} from "../components/Balance";
 import axios from "axios";
+import { url } from "../globalApi";
 export const Dashboard = () => {
     const [balance,SetBalance] = useState(0);
     const token = localStorage.getItem("token")
     useEffect(() => {
-        axios.get("http://20.244.89.70:4000/api/v1/account/balance",{
+        console.log(`${url}/api/v1/account/balance`);
+        axios.get(`${url}/api/v1/account/balance`,{
             headers:{
                 Authorization: `Bearer ${token}`
             }

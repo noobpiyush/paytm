@@ -6,6 +6,7 @@ import { InputBox } from "../components/InputBox"
 import { SubHeading } from "../components/SubHeading"
 import axios from "axios";
 import { useNavigate } from "react-router-dom"
+import { url } from "../globalApi"
 
 export const Signup = () => {
     const [firstName, setFirstName] = useState("");
@@ -17,8 +18,8 @@ export const Signup = () => {
 
    const signupUser = async () => {
     try {
-
-      const response = await axios.post("http://20.244.89.70:4000/api/v1/user/signup", {
+        console.log(`${url}/api/v1/user/signup`);
+      const response = await axios.post(`${url}/api/v1/user/signup`, {
         username,
         firstName,
         lastName,

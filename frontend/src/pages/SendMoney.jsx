@@ -2,6 +2,7 @@ import {  useSearchParams } from 'react-router-dom';
 import axios from "axios";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { url } from '../globalApi';
 export const SendMoney = () => {
     const [searchParams] = useSearchParams();
     const id = searchParams.get("id");
@@ -12,7 +13,7 @@ export const SendMoney = () => {
     let navigate = useNavigate();
     const handleTransfer = async () => {
         try {
-            await axios.post("http://20.244.89.70:4000/api/v1/account/transfer", {
+            await axios.post(`${url}/api/v1/account/transfer`, {
                 to: id,
                 amount
             }, {
