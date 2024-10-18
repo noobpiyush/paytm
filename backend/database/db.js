@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://paytm:piyush@cluster0.qgvm7jk.mongodb.net/paytm");
+mongoose.connect("mongoDb Url");
 
 //creating userschema
 
