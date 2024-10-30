@@ -5,7 +5,7 @@ const app = express();
 
 app.use(cors(
     {
-        origin: ["https://paytm-pw-client.vercel.app/"],
+        origin: ["https://pytm12.netlify.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
