@@ -1,1 +1,1 @@
-export const url = "https://paytm-api-omega.vercel.app";
+export const url = "http://localhost:4000";
