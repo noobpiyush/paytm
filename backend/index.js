@@ -19,5 +19,6 @@ app.get("/hi", (req, res) => {
 })
 
 app.use("/api/v1", rootRouter);
-console.log("connected");
+console.log("connected to db");
+
 app.listen(4000);
